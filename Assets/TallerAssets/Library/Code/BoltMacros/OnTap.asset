@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1893448595, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: OnTap
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[{"key":"OnTapBegin","label":"On
+      Tap Begin","summary":null,"hideLabel":false}],"valueInputDefinitions":[],"valueOutputDefinitions":[{"_type":"Lean.Touch.LeanFinger","key":"LeanFinger","label":null,"summary":null,"hideLabel":false}],"title":null,"summary":null,"pan":{"x":-752.0,"y":79.75002},"zoom":0.8,"elements":[{"defaultValues":{},"position":{"x":-285.0,"y":-125.0},"guid":"28051656-8bea-4042-9577-c022db2a758c","$version":"A","$type":"Bolt.GraphOutput","$id":"11"},{"argumentCount":1,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"_OnFingerTap","$type":"System.String"}},"position":{"x":-1176.0,"y":-130.0},"guid":"5d948343-2270-44e9-9d40-4b157d693eca","$version":"A","$type":"Bolt.CustomEvent","$id":"13"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"OnTapBegin","guid":"32b3771e-6867-4aa6-b0e1-dae61b1728e4","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"argument_0","destinationUnit":{"$ref":"11"},"destinationKey":"LeanFinger","guid":"8f8f1054-af10-46a7-b383-fbf723ff4911","$type":"Bolt.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []

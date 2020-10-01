@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1893448595, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: OnGameStateChange
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[{"key":"_OnGamestateChange","label":null,"summary":null,"hideLabel":false}],"valueInputDefinitions":[],"valueOutputDefinitions":[{"_type":"Taller.EGameStates","key":"OnGamestateChange","label":"OnGamestateChange","summary":null,"hideLabel":false}],"title":"OnGamestateChange","summary":null,"pan":{"x":-384.04,"y":195.6947},"zoom":0.7,"elements":[{"defaultValues":{},"position":{"x":74.0,"y":36.0},"guid":"d12688d2-4e1c-47d4-8a7e-d46eeccb556e","$version":"A","$type":"Bolt.GraphOutput","$id":"11"},{"argumentCount":1,"coroutine":true,"defaultValues":{"target":null,"name":{"$content":"_OnGamestateChange","$type":"System.String"}},"position":{"x":-329.0,"y":48.0},"guid":"0d3fb384-4798-4571-8a28-40e44338794d","$version":"A","$type":"Bolt.CustomEvent","$id":"13"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"gameManagerRef","$type":"System.String"}},"position":{"x":-778.0,"y":66.0},"guid":"c8e5ea51-3708-4ef9-bf2d-26848d85fe7e","$version":"A","$type":"Bolt.GetVariable","$id":"15"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"_OnGamestateChange","guid":"1ee47860-cf95-4c9c-850b-55c8d092ef4d","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"value","destinationUnit":{"$ref":"13"},"destinationKey":"target","guid":"7a321923-b72d-40c1-b575-509e0683a34a","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"argument_0","destinationUnit":{"$ref":"11"},"destinationKey":"OnGamestateChange","guid":"159af464-7bdc-40c0-8a7a-08ddcf4e7b1e","$type":"Bolt.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []
