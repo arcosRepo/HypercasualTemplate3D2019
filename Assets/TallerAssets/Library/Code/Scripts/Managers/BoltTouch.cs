@@ -10,7 +10,7 @@ namespace Taller
 {
     
     [System.Serializable]
-    public class BoltTouch : MonoBehaviour
+    public class BoltTouch : Singleton<BoltTouch>
     {
        public bool debugLog;
         private void OnEnable()
@@ -23,7 +23,7 @@ namespace Taller
             LeanTouch.OnFingerUp += LeanTouch_OnFingerUp;
             LeanTouch.OnFingerUpdate += LeanTouch_OnFingerUp;
             LeanTouch.OnGesture += LeanTouch_OnGesture; ; 
-
+    Variables.Scene(gameObject).Set("BoltTouchReference",gameObject);
         }
 
       
@@ -43,12 +43,13 @@ namespace Taller
 
         private void LeanTouch_OnFingerUp(LeanFinger obj)
         {
-            LeanTouch_Listener(obj, "_OnFingerUp");
+            //LeanTouch_Listener(obj, "_OnFingerUp");
         }
 
         private void LeanTouch_OnFingerExpired(LeanFinger obj)
         {
             LeanTouch_Listener(obj, "_OnFingerExpired");
+            LeanTouch_Listener(obj, "_OnFingerUp");
         }
 
         private void LeanTouch_OnFingerDown(LeanFinger obj)
@@ -74,7 +75,8 @@ namespace Taller
                 return;
 
             }
-        //    CustomEvent.Trigger(gameObject, "_OnGesture", obj);
+            if(obj.Count==0)return;
+          CustomEvent.Trigger(gameObject, "_OnGesture", obj[0]);
 
         }
 
@@ -87,8 +89,8 @@ namespace Taller
                 return;
 
             }
-            if(debugLog)
-            Debug.Log("TriggerName");
+          if(debugLog)
+         Debug.Log("TriggerName:"+TriggerName);
             CustomEvent.Trigger(gameObject, TriggerName, obj);
            
            
